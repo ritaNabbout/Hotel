@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    html{
+      scroll-behavior: smooth;
+    }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  }
+  
+  .login{
+  background-color: lightseagreen;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Column container */
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  .btn {
+    background-color: lightseagreen;
+    color: white;
+    padding: 13px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="login.php"  class="login">Login</a>
+        <a href="Cinema.html">Back<<</a>
+      </div>
+      <div class="w3-row-padding">
+
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Check Our food Menu</li>
+            <li class="w3-padding-16"><b>Delivery to the cinema</b></li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button  w3-padding-large" style="background-color: lightseagreen;"><a href="BalineseFood.html">Food Menu</a></button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+          
+          <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <li class=" w3-xlarge w3-padding-32" style="background-color: lightseagreen;">Popcorn</li>
+            <li class="w3-padding-16"><b>Flavors:</b> <br>
+                <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+                <label for="myCheck1">Aged White Cheddar </label> 
+                <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+                <label for="myCheck2">Caramel Pumpkin Spice </label><br> 
+                <input type="checkbox" id="myCheck3" onclick="myFunction3()">
+                <label for="myCheck3">Creamery Butter</label> 
+                <input type="checkbox" id="myCheck4" onclick="myFunction4()">
+                <label for="myCheck4">Classic Caramel</label> <br>
+                <input type="checkbox" id="myCheck5" onclick="myFunction5()">
+                <label for="myCheck5">Caramel, Cheddar</label> 
+                <input type="checkbox" id="myCheck6" onclick="myFunction6()">
+                <label for="myCheck6">Cheddar, white Cheddar</label> 
+                
+            </li>
+            <li class="w3-padding-16"><b><p>Popcorn Order:</p></b>
+                <b><p id="text1" style="display:none">You ordered Aged White Cheddar popcorn for $5</p></b> 
+               <b> <p id="text2" style="display:none">You ordered Caramel Pumpkin Spice popcorn for $7</p></b>
+               <b> <p id="text3" style="display:none">You ordered Creamery Butter popcorn for $6</p></b>
+               <b> <p id="text4" style="display:none">You ordered Classic Caramel popcorn for $6</p></b>
+               <b> <p id="text5" style="display:none">You ordered Caramel, Cheddar popcorn for $8</p></b>
+               <b> <p id="text6" style="display:none">You ordered Cheddar, white Cheddar popcorn for $10</p></b>
+            </li>
+           
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button  w3-padding-large" style="background-color: lightseagreen;">Order</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Beverages</li>
+            <li class="w3-padding-16"><b>Fresh Juice:</b> <br>
+                <input type="checkbox" id="myCheck7" onclick="myFunction7()">
+                <label for="myCheck7">Orange</label> 
+                <input type="checkbox" id="myCheck8" onclick="myFunction8()">
+                <label for="myCheck8">Carrot</label>
+                <input type="checkbox" id="myCheck9" onclick="myFunction9()">
+                <label for="myCheck9">Strawberries</label> 
+                <input type="checkbox" id="myCheck10" onclick="myFunction10()">
+                <label for="myCheck10">Avocado</label> </li>
+                <li class="w3-padding-16"><b>Alcohol Drinks:</b> <br>
+                    <input type="checkbox" id="myCheck11" onclick="myFunction11()">
+                    <label for="myCheck11">Beer</label> 
+                    <input type="checkbox" id="myCheck12" onclick="myFunction12()">
+                    <label for="myCheck12">Vodka</label>
+                    <input type="checkbox" id="myCheck13" onclick="myFunction13()">
+                    <label for="myCheck13">whiskey</label> 
+                    <input type="checkbox" id="myCheck14" onclick="myFunction14()">
+                    <label for="myCheck14">Wine Rosé</label>
+                    <input type="checkbox" id="myCheck15" onclick="myFunction15()">
+                    <label for="myCheck15">Red Wine</label></li>
+                    <li class="w3-padding-16"><b>Hot Drinks:</b> <br>
+                        <input type="checkbox" id="myCheck16" onclick="myFunction16()">
+                        <label for="myCheck16">Tea</label> 
+                        <input type="checkbox" id="myCheck17" onclick="myFunction17()">
+                        <label for="myCheck17">Hot Chocolat</label>
+                        <input type="checkbox" id="myCheck18" onclick="myFunction18()">
+                        <label for="myCheck18">Chai</label> 
+                        <input type="checkbox" id="myCheck19" onclick="myFunction19()">
+                        <label for="myCheck19">Coffee</label>
+                        </li>
+            <li class="w3-padding-16"><b>Place Your Order </b>
+                <b><p id="text7" style="display:none">You ordered Orange Juice for $2</p></b>
+                <b><p id="text8" style="display:none">You ordered Carrot Juice for $2</p></b>
+                <b><p id="text9" style="display:none">You ordered Strawberries Juice for $7</p></b>
+                <b><p id="text10" style="display:none">You ordered Avocado Juice for $6</p></b>
+                <b><p id="text11" style="display:none">You ordered A Beer for $8</p></b>
+                <b><p id="text12" style="display:none">You ordered Vodka for $9</p></b>
+                <b><p id="text13" style="display:none">You ordered whiskey for $15</p></b>
+                <b><p id="text14" style="display:none">You ordered Wine Rosé for $7</p></b>
+                <b><p id="text15" style="display:none">You ordered Red Wine for $7</p></b>
+                <b><p id="text16" style="display:none">You ordered A Cup of tea for $2</p></b>
+                <b><p id="text17" style="display:none">You ordered Hot Chocolat for $4</p></b>
+                <b><p id="text18" style="display:none">You ordered Chai for $3</p></b>
+                <b><p id="text19" style="display:none">You ordered A Cup of Coffee for $2</p></b>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button  w3-padding-large" style="background-color: lightseagreen;">Order</button>
+            </li>
+          </ul>
+        </div>
+        
+        </div>
+        <script>
+            function myFunction1() {
+              var checkBox = document.getElementById("myCheck1");
+              var text1 = document.getElementById("text1");
+              if (checkBox.checked == true){
+                text1.style.display = "block";
+              } else {
+                 text1.style.display = "none";
+              }
+            }
+            </script>
+             <script>
+                function myFunction2() {
+                  var checkBox = document.getElementById("myCheck2");
+                  var text2 = document.getElementById("text2");
+                  if (checkBox.checked == true){
+                    text2.style.display = "block";
+                  } else {
+                     text2.style.display = "none";
+                  }
+                }
+                </script>
+                 <script>
+                    function myFunction3() {
+                      var checkBox = document.getElementById("myCheck3");
+                      var text3 = document.getElementById("text3");
+                      if (checkBox.checked == true){
+                        text3.style.display = "block";
+                      } else {
+                         text3.style.display = "none";
+                      }
+                    }
+                    </script>
+                     <script>
+                        function myFunction4() {
+                          var checkBox = document.getElementById("myCheck4");
+                          var text4 = document.getElementById("text4");
+                          if (checkBox.checked == true){
+                            text4.style.display = "block";
+                          } else {
+                             text4.style.display = "none";
+                          }
+                        }
+                        </script>
+                         <script>
+                            function myFunction5() {
+                              var checkBox = document.getElementById("myCheck5");
+                              var text5 = document.getElementById("text5");
+                              if (checkBox.checked == true){
+                                text5.style.display = "block";
+                              } else {
+                                 text5.style.display = "none";
+                              }
+                            }
+                            </script>
+                             <script>
+                                function myFunction6() {
+                                  var checkBox = document.getElementById("myCheck6");
+                                  var text6 = document.getElementById("text6");
+                                  if (checkBox.checked == true){
+                                    text6.style.display = "block";
+                                  } else {
+                                     text6.style.display = "none";
+                                  }
+                                }
+                                </script>
+                                 <script>
+                                    function myFunction7() {
+                                      var checkBox = document.getElementById("myCheck7");
+                                      var text7 = document.getElementById("text7");
+                                      if (checkBox.checked == true){
+                                        text7.style.display = "block";
+                                      } else {
+                                         text7.style.display = "none";
+                                      }
+                                    }
+                                    </script>
+                                     <script>
+                                        function myFunction8() {
+                                          var checkBox = document.getElementById("myCheck8");
+                                          var text8 = document.getElementById("text8");
+                                          if (checkBox.checked == true){
+                                            text8.style.display = "block";
+                                          } else {
+                                             text8.style.display = "none";
+                                          }
+                                        }
+                                        </script>
+                                         <script>
+                                            function myFunction9() {
+                                              var checkBox = document.getElementById("myCheck9");
+                                              var text9 = document.getElementById("text9");
+                                              if (checkBox.checked == true){
+                                                text9.style.display = "block";
+                                              } else {
+                                                 text9.style.display = "none";
+                                              }
+                                            }
+                                            </script>
+                                             <script>
+                                                function myFunction10() {
+                                                  var checkBox = document.getElementById("myCheck10");
+                                                  var text10 = document.getElementById("text10");
+                                                  if (checkBox.checked == true){
+                                                    text10.style.display = "block";
+                                                  } else {
+                                                     text10.style.display = "none";
+                                                  }
+                                                }
+                                                </script>
+                                                 <script>
+                                                function myFunction10() {
+                                                  var checkBox = document.getElementById("myCheck10");
+                                                  var text10 = document.getElementById("text10");
+                                                  if (checkBox.checked == true){
+                                                    text10.style.display = "block";
+                                                  } else {
+                                                     text10.style.display = "none";
+                                                  }
+                                                }
+                                                </script>
+                                     <script>
+                                        function myFunction11() {
+                                          var checkBox = document.getElementById("myCheck11");
+                                          var text11 = document.getElementById("text11");
+                                          if (checkBox.checked == true){
+                                            text11.style.display = "block";
+                                          } else {
+                                             text11.style.display = "none";
+                                          }
+                                        }
+                                        </script>   
+                                         <script>
+                                            function myFunction12() {
+                                              var checkBox = document.getElementById("myCheck12");
+                                              var text12 = document.getElementById("text12");
+                                              if (checkBox.checked == true){
+                                                text12.style.display = "block";
+                                              } else {
+                                                 text12.style.display = "none";
+                                              }
+                                            }
+                                            </script>  
+                                            <script>
+                                               function myFunction13() {
+                                                var checkBox = document.getElementById("myCheck13");
+                                                var text13 = document.getElementById("text13");
+                                                if (checkBox.checked == true){
+                                                  text13.style.display = "block";
+                                                } else {
+                                                   text13.style.display = "none";
+                                                }
+                                              }
+                                              </script>
+                                   <script>
+                                      function myFunction14() {
+                                        var checkBox = document.getElementById("myCheck14");
+                                        var text14 = document.getElementById("text14");
+                                        if (checkBox.checked == true){
+                                          text14.style.display = "block";
+                                        } else {
+                                           text14.style.display = "none";
+                                        }
+                                      }
+                                      </script>   
+                                       <script>
+                                          function myFunction15() {
+                                            var checkBox = document.getElementById("myCheck15");
+                                            var text15 = document.getElementById("text15");
+                                            if (checkBox.checked == true){
+                                              text15.style.display = "block";
+                                            } else {
+                                               text15.style.display = "none";
+                                            }
+                                          }
+                                          </script> 
+                                          <script>
+                                             function myFunction16() {
+                                                var checkBox = document.getElementById("myCheck16");
+                                                var text16 = document.getElementById("text16");
+                                                if (checkBox.checked == true){
+                                                  text16.style.display = "block";
+                                                } else {
+                                                   text16.style.display = "none";
+                                                }
+                                              }
+                                              </script>
+                                   <script>
+                                      function myFunction17() {
+                                        var checkBox = document.getElementById("myCheck17");
+                                        var text17 = document.getElementById("text17");
+                                        if (checkBox.checked == true){
+                                          text17.style.display = "block";
+                                        } else {
+                                           text17.style.display = "none";
+                                        }
+                                      }
+                                      </script>   
+                                       <script>
+                                          function myFunction18() {
+                                            var checkBox = document.getElementById("myCheck18");
+                                            var text18 = document.getElementById("text18");
+                                            if (checkBox.checked == true){
+                                              text18.style.display = "block";
+                                            } else {
+                                               text18.style.display = "none";
+                                            }
+                                          }
+                                          </script> 
+                                          <script>
+                                            function myFunction19() {
+                                              var checkBox = document.getElementById("myCheck19");
+                                              var text19 = document.getElementById("text19");
+                                              if (checkBox.checked == true){
+                                                text19.style.display = "block";
+                                              } else {
+                                                 text19.style.display = "none";
+                                              }
+                                            }
+                                            </script>             
+</body></html>

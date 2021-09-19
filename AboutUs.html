@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.checked {
+  color: orange;
+}
+.login{
+background-color: lightseagreen;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.btn {
+  background-color: lightseagreen;
+  color: white;
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ffffff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color:lightseagreen;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color:  lightseagreen;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: lightseagreen;
+  color: white;
+  transform: rotateX(180deg);
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #1abc9c;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="login.php"  class="login">Login</a>
+  <a href="homepage.html">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="BalineseFood.html">Food Menu</a>
+  <a href="Cinema.html">Cinema</a>
+  <a href="Food Menu" class="right">Link</a>
+
+</div>
+
+<div class="row">
+  <div class="side">
+    <button class="btn">Categories:</button>
+    <div class="dropdown">
+      <button class="btn" style="border-left:1px solid lightseagreen">
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#packages">Packages and premotions</a>
+        <a href="#Events">Events</a>
+        <a href="#facilities">Facilities and features</a>
+        <a href="#Topics">Show Topics</a>
+      </div>
+    </div>
+    <h2>About RS Hotel:</h2>
+    <img src="BookNow4.jpg" alt="Quarantine Package" style="width:100% ; height: 250px;">
+    <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+    <p>RS Hotel is known as the destination of life-loving jet-setters, prominent business leaders, and vacationing families.With 300 rooms and suites!</p>
+    <p>This hotel is founded by Rita Nabbout and Saleh Mohsen, the business opened its first establishment in 1999, to become one of the largest hotel in Bali. </p>
+    <p>Our hotel contains a lot of facilities and features, many events, activities, and so much more! </p>
+    <h3>Discover it out!</h3>
+   
+    <img src="hotel.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="near hotel1.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="outdoor1.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="near hotel6.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="spa2.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="public area.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="outdoor3.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="gym.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="hotel1.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="jaccuzzi.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="presidential 3 bedroom villa3.jpg" style="width:100% ; height: 150px;"><br><br>
+    <img src="presidential 3 bedroom villa5.jpg" style="width:100% ; height: 150px;"><br><br>
+    
+  </div>
+  <div class="main">
+    <h2 id="packages">Packages and premotions:</h2>
+    <h5>Check out our latest offers and packages!</h5>
+    <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="QuarantinePackage.jpg" alt="Quarantine Package" style="width:100% ; height: 100%;">
+          </div>
+          <div class="flip-box-back">
+            <h2>The Quarantine Package is a hospitality service.
+              Its for $1000 only! 
+              Go and check it out!
+            </h2>
+            <button class="btn" ><a href="QuarantinePackage.html" style="color: white;">Register Now!</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column" style="background-color:#bbb;">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="Executive Suite.jpg" " style="width:100% ; height: 100%;">
+          </div>
+          <div class="flip-box-back">
+            <h2> Booking Discounts: book a Executive suite and have a discount 10% !
+            </h2>
+            <button class="btn" ><a href="ExecutiveSuiteOffer.html" style="color: white;">Register Now!</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="weddingPack.jpg" alt="wedding" style="width:100% ; height: 100%;">
+          </div>
+          <div class="flip-box-back">
+            <h3>Benefit from the special Offers and discounts on your wedding celebration.
+              This offer is valid on weekdays until the End of September 2021.
+            </h3>
+            <button class="btn" ><a href="WeddingPackage.html" style="color: white;">Register Now!</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+    <br><br>
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="SingleBed.jpg" style="width:100% ; height: 100%;">
+            </div>
+            <div class="flip-box-back">
+              <h2>10% off your second week stay on your double room 
+              </h2>
+              <button class="btn" ><a href="doubleroomoffer.html" style="color: white;">Register Now!</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column" style="background-color:#bbb;">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="floatingBreakfastLarge.jpg"  style="width:100% ; height: 100%;">
+            </div>
+            <div class="flip-box-back">
+              <h2>Book your room one month in advance and get a floating breakfast in our villa
+                on arrival!
+              </h2>
+              <button class="btn" ><a href="rooms.html" style="color: white;">Register Now!</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="Villa.jpg" alt="Honeymoon Package" style="width:100% ; height: 100%;">
+            </div>
+            <div class="flip-box-back">
+              <h4>Book a room for your honeymoon in one of our villas and you'll get a 10% discount and free floating breakfast 
+                all for 1500$ for 5 days! Hurry up and register. This offer is valid on weekdays until the End of july 2021.
+              </h4>
+              <button class="btn" ><a href="Honeymoon.html" style="color: white;">Register Now!</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <br><br>
+    <h2 id="Events">Events:</h2>
+    <img src="concert3.jpg"  style="width:100% ; height: 250px;"><br>
+    <div class="row">
+      <div class="tooltip">
+      <div class="column" style="background-color:#aaa;">
+        <div class="month">      
+          <ul>
+            <li>
+              June<br>
+              <span style="font-size:18px">2021</span>
+            </li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+          <li>Sa</li>
+          <li>Su</li>
+        </ul>
+        
+        <ul class="days">  
+          <li>1</li>
+          <li>2</li>
+          <li><span class="active" >3 <span class="tooltiptext"><h1>The Annual Concert!</h1><h2>COLOURFUL, UNIQUE, SPIRITUAL!</h2><h4>The biggest annual event in Bali, the peak of cultural celebration on the island held for a whole month. Every region of Bali will send their best candidates in the costume parade, traditional gamelan orchestra and many other competitions. The president of Indonesia usually will attend the opening party in Denpasar; thousand of people will stodge to see this event.</h4></span></span></li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+        </div></div> <br>
+       
+        <br>
+        <div class="tooltip">
+        <div class="column" style="background-color:#aaa;">
+        <div class="month">      
+          <ul>
+            <li>
+              August<br>
+              <span style="font-size:18px">2021</span>
+            </li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+          <li>Sa</li>
+          <li>Su</li>
+        </ul>
+        
+        <ul class="days">  
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li><span class="active" >15<span class="tooltiptext"><h1>Kuta Sea Sand Land</h1>this festival is to celebrate the anniversary of Indonesia. Many agendas are on schedule from the cultural parade, sports competitions, live performance by Indonesian artists, and many more. This event will take place in the legendary Kuta Beach.</span></span></li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+        </div>
+        </div><br> 
+        <div class="tooltip">
+        <div class="column" style="background-color:#aaa;">
+          
+        <div class="month">      
+          <ul>
+            <li>
+              March<br>
+              <span style="font-size:18px">2022</span>
+            </li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+          <li>Sa</li>
+          <li>Su</li>
+        </ul>
+        
+        <ul class="days">  
+          <li><span class="active" >1<span class="tooltiptext"><h1>Nyepi day</h1>Unlike typical celebrations of the new year all over the world which marked with endless fireworks shows, Balinese prefer to celebrate their first day of the year by dedicating a full day to connect with God (Hyang Widi Wasa) through prayer, fasting and meditation. During Nyepi, all the people on the island are not allowed to go out of their house. Every road is closed down, even the airport and harbour will be shut down for a whole day.</span></span></li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+        </div></div></div><br>
+    <p>There will always be special events in Bali. So Keep your eye on and stay updated!</p>
+    <br>
+    <h2 id="facilities">Facilities and features:</h2>
+    <h4><strong>Amenities</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <div class="row">
+          <div class="column" style="background-color:#aaa;">
+        <p>&nbsp;&nbsp;&nbsp;<i class="fa fa-fw fa-wifi"></i> Wi-Fi in designated areas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+        <p>&nbsp;&nbsp;&nbsp;<i class="fa fa-fw fa-shower"></i> Shower</p>
+        <p>&nbsp;&nbsp;&nbsp;<i  class='fas'>&#xf5bb;</i> Spa</p>
+        <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf593;</i> Hot tub</p>
+        <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf44b;</i> Gym</p>
+        <p>&nbsp;&nbsp;&nbsp;<i class="fa fa-fw fa-tv"></i> TV</p>
+        <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf2e7;</i> Kitchen</p>
+        <p>&nbsp;&nbsp;&nbsp;<i class="fa fa-fw fa-thermometer"></i> Heating</p>
+        <p>&nbsp;&nbsp;&nbsp;<i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+          </div>
+          <div class="column" style="background-color:#bbb;">
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf561;</i> Cocktail</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf77d;</i> Baby carriage</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf06d;</i> fire event</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf0f9;</i>Hospitality Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf64f;</i> Near City</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf6bb;</i> Camping</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf5a0;</i> Tourism</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf095;</i> Contact</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf1d8;</i> Email </p>
+          </div>
+          <div class="column" style="background-color:#aaa;">
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf185;</i> Sun</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf773;</i> Beach & Pool</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf09d; &nbsp; &#xf53a;</i> Credit Card or Cash</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf21e;</i>Medical Service</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf84a;</i> Biking</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf5c4;</i> Swimming</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf533;</i> Helicopter</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf48d;</i> Designated smoking area &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p><i  class='fas'>&nbsp;&nbsp;&nbsp; &#xf1ba;</i> Taxi </p>
+              </div>
+        </div>
+    
+        
+        
+      </div>
+    </div>
+    <hr>
+    <h2 id="Topics">Topics:</h2>
+    
+   <button class="btn" style="border-left:1px solid lightseagreen;"><a href="rooms.html">Rooms</a></button> <button class="btn" style="border-left:1px solid lightseagreen"><a href="BalineseFood.html">Food Menu</a></button>
+   <button class="btn" style="border-left:1px solid lightseagreen"><a href="#packages">Packages and premotions</a> </button><button class="btn" style="border-left:1px solid lightseagreen"><a href="#events">Events</a></button>
+   <button class="btn" style="border-left:1px solid lightseagreen"><a href="#facilities">facilities and features </a> </button><button class="btn" style="border-left:1px solid lightseagreen"><a href="Cinema.html"> Cinema</a></button>
+   <button class="btn" style="border-left:1px solid lightseagreen"><a href="Desserts.html" >Desserts</a></button> <button class="btn" style="border-left:1px solid lightseagreen"><a href="Outdoor.html">Outdoor</a></button>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
+

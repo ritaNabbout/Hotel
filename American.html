@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="BalineseFood.html" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="Italian.html" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="Arabic.html" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="Àlafrançaise.html" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="Asian.html" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="#American" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="Desserts.html" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        <label for="myCheck"></label> 
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+        <checkbox aria-checked="myFunction()">Breakfast</checkbox>
+        <label for="myCheck2"></label> 
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+        <checkbox aria-checked="myFunction()">lunch</checkbox>
+        <label for="myCheck3"></label> 
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+        <checkbox aria-checked="myFunction()">Dinner</checkbox>
+        
+        
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script></div>
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;">American Food</div>
+  </div>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div id="myDIV">
+  <!-- First Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Breakfast</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="PancakesAndMapleSyrup.jpg" alt="Pancakes and Maple Syrup" style="width:100%"id="American">
+      <h3>Pancakes and Maple Syrup </h3>
+      <p>Pancakes with Maple syrup and fruits.</p>
+      <button>$6.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="EggsBenedict.jpg" alt="Eggs Benedict" style="width:100%">
+      <h3>Eggs Benedict</h3>
+      <p>English muffin, some type of ham or bacon (Canadian bacon is often used), a poached egg and hollandaise sauce.</p>
+      <button>$8.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BagelwithCreamCheese.jpg" alt="Bagel with Cream Cheese" style="width:100%">
+      <h3>Bagel with Cream Cheese</h3>
+      <p>Bagel with cream cheese or cream cheese along with smoked salmon.</p>
+      <button>$5.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BreakfastBurrito.jpg" alt="Breakfast Burrito" style="width:100%">
+      <h3>Breakfast Burrito</h3>
+      <p>Tortilla filled with scrambled eggs, ham, cheese, sausage, bacon and hash browns, the options for variation are endless. Salsa, potatoes, avocado, beans, spinach, feta and mushrooms are just some of the many other potential ingredients that can be included.</p>
+      <button>$8.75</button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="SausageAndEggSandwich.jpg" alt="Sausage and Egg Sandwich" style="width:100%">
+      <h3>Sausage and Egg Sandwich</h3>
+      <p>Sausage, Egg, and Cheese Breakfast Sandwich with Maple Butter-start your day with a hearty breakfast sandwich! </p>
+      <button>$8.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="HuevosRancheros.jpg" alt="Huevos Rancheros" style="width:100%">
+      <h3>Huevos Rancheros</h3>
+      <p>Egg-based dish that uses elements of traditional Mexican cuisine. The dish includes the use of, tortillas, tomato-chili sauce, refried beans and rice.</p>
+      <button>$10.50</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="HotOatmeal.jpg" alt="Hot Oatmeal or Porridge" style="width:100%">
+      <h3>Hot Oatmeal or Porridge</h3>
+      <p>Quick Oats with milk and fruits. </p>
+      <button>$6.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BiscuitsAndGravy.jpg" alt="Biscuits and Gravy" style="width:100%">
+      <h3>Biscuits and Gravy</h3>
+      <p>Biscuits and Gravy is a savory three-ingredient sausage gravy</p>
+      <button>$12.00</button>
+    </div>
+  </div>
+  </div>
+  <div id="myDIV1">
+
+  <!-- third Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Lunch</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="TheClassicHotDog.jpg" alt="The classic hot dog" style="width:100%"id="American">
+      <h3>The classic hot dog</h3>
+      <p>A sausage sandwiched between sliced buns with ketchup or mustard toppings. Any type of meat can be used to make the sausage. The hot dog can be either grilled, microwaved, boiled or even baked.</p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="ReubenSandwich.jpg" alt="Reuben sandwich " style="width:100%">
+      <h3>Reuben sandwich </h3>
+      <p>Grilled corned beef matched with sauerkraut with a topped Swiss cheese all dressed between two rye bread.</p>
+      <button>$10.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BarbecueRibs.jpg" alt="Barbecue Ribs" style="width:100%">
+      <h3>Barbecue Ribs</h3>
+      <p>A classic rib can be of beef or pork. The grilled ribs can be taken with vinegar or tomato-based sauce depending on the preference.</p>
+      <button>$18.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="PhillyCheesesteak.jpg" alt="Philly Cheesesteak" style="width:100%">
+      <h3>Philly Cheesesteak</h3>
+      <p>Philly Cheesesteak is a mix of sliced beef, chip steak, cheese, and onions inside a hoagie roll.</p>
+      <button>$10.50</button>
+    </div>
+  </div>
+  
+  <!-- fourth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="lobster-mac-and-cheese.jpg" alt="Lobster Mac and Cheese" style="width:100%">
+      <h3>Lobster Mac and Cheese</h3>
+      <p>Sweet lobster chunks, especially when they're baked into a delicious plate of mac and cheese.</p>
+      <button>$15.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="CreamyMacaroniAndCheese.jpg" alt="Creamy Macaroni and Cheese" style="width:100%">
+      <h3>Creamy Macaroni and Cheese</h3>
+      <p>Mac and cheese recipe. It’s saucy, thick and very rich, with a wonderful cheddar flavor.</p>
+      <button>$11.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Sticky-Honey-Chicken-Wings.jpg" alt="Sticky Honey Chicken Wings" style="width:100%">
+      <h3>Sticky Honey Chicken Wings</h3>
+      <p>Honey garlic sauce is a sweet and sour sauce that tastes like a mix between honey and garlic, popular in Canada. Honey garlic is one of the many sauces put on chicken wings, ribs,and other foods such as meatballs.</p>
+      <button>$12.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="CaliforniaTamalePie.jpg" alt="California Tamale Pie" style="width:100%">
+      <h3>California Tamale Pie</h3>
+      <p>Cornmeal crust and ingredients typically used in tamales, fillings arranged in several layers with beef.</p>
+      <button>$13.00</button>
+    </div>
+  </div>
+   <!-- fifth Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Carolina-Style-Pork-Barbecue.jpg" alt="Carolina-Style Pork Barbecue" style="width:100%">
+      <h3>Carolina Style Pork Barbecue</h3>
+      <p> Eastern-style sauce is vinegar- and pepper-"-based, with no tomato whatsoever, and is mostly used as a marinade. The coleslaw served with eastern-style uses mayonnaise.</p>
+      <button>$10.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="NewYork-StylePizza.jpg" alt="New York-Style Pizza" style="width:100%">
+      <h3>New York-Style Pizza</h3>
+      <p>Hand-tossed thin crust, often sold in wide slices to go.Traditional toppings are simply tomato sauce and shredded mozzarella cheese.</p>
+      <button>$9.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Blue-Ribbon-Beef-Nachos.jpg" alt="Blue-Ribbon Beef Nachos" style="width:100%">
+      <h3>Blue-Ribbon Beef Nachos</h3>
+      <p>Tortilla chips topped by Chili powder and sassy salsa season a zesty mixture of ground beef and refried beans that’s sprinkled with green onions, tomatoes and ripe olives.</p>
+      <button>$11.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Carolina-Crab-Boil.jpg" alt="Carolina Crab Boil" style="width:100%">
+      <h3>Carolina Crab Boil</h3>
+      <p>Shrimp, corn on the cob, sausage, and red potatoes,serve as a stew in its liquid over hot rice.</p>
+      <button>$9.00</button>
+    </div>
+  </div>
+  </div>
+  <div id="myDIV2">
+   <!-- sixth Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Dinner</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="Baked-Oysters-with-Tasso-Cream.jpg" alt="Baked Oysters with Tasso Cream" style="width:100%"id="American">
+      <h3>Baked Oysters with Tasso Cream</h3>
+      <p>Tasso ham or fully cooked chorizo,fresh oysters in the shell,white bread, whipping cream, hot sauce.</p>
+      <button>$14.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="californiaRoll.jpg" alt="californiaRoll" style="width:100%">
+      <h3>California Roll</h3>
+      <p>Wrapped ingredients are the avocado and crab meat,and the optional mayonnaise these are all typically wrapped with seaweed, although soy paper can be used.Outer layer of rice in an inside-out roll.</p>
+      <button>$11.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Tater-Tot-Casseroles.jpg" alt="Tater Tot Casseroles" style="width:100%">
+      <h3>Tater Tot Casseroles</h3>
+      <p>Ground beef, sausage and cheese make this tater tot casserole with green beans a crowd-pleaser. Cayenne pepper and hot Italian sausage give it a pleasant kick.</p>
+      <button>$16.00</button>
+    </div>
+    <div class="w3-quarter">
+    <img src="Sweet-Onion-Pimiento-Cheese-Deviled-Eggs.jpg" alt="Sweet Onion Pimiento Cheese Deviled Eggs" style="width:100%">
+    <h3>Sweet Onion Pimiento Cheese Deviled Eggs</h3>
+    <p>Hard-boiled eggs cut in half, and filled with a paste made from the egg yolks mixed with other ingredients such as mayonnaise, mustard,cheddar cheese,sweet onion.</p>
+    <button>$8.00</button>
+  </div>
+  </div>
+  
+  <!-- seventh Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Green-Tomato.jpg" alt="Green Tomato BLT" style="width:100%">
+      <h3>Green Tomato BLT</h3>
+      <p> cornmeal-dusted green tomatoes and a bacon, lettuce and tomato sandwich.</p>
+      <button>$7.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Melt-in-Your-Mouth-Chuck-Roast.jpg" alt="Melt-in-Your-Mouth Chuck Roast" style="width:100%">
+      <h3>Melt-in-Your-Mouth Chuck Roast</h3>
+      <p>Beef chuck roast, with tomato sauce and mashed potatoes.</p>
+      <button>$16.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="FavoriteChickenPotpie.jpg" alt="Favorite Chicken Potpie" style="width:100%">
+      <h3>Favorite Chicken Potpie</h3>
+      <p>Chock-full of chicken, potatoes, peas and corn, this recipe makes two golden pies.</p>
+      <button>$12.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Spaghetti-Pie-Casserole.jpg" alt="Spaghetti Pie Casserole" style="width:100%">
+      <h3>Spaghetti Pie Casserole</h3>
+      <p>Baked spaghetti with cream cheese and beef.</p>
+      <button>$14.00</button>
+    </div>
+  </div></div>
+  <!-- 8 Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Burgers</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Pie 'n Burger.jpg" alt="Pie 'n Burger" style="width:100%">
+      <h3>Pie 'n Burger</h3>
+      <p>Simple leaf of lettuce, slice of American cheese, and pickles, then drenches the bottom in a house-made Thousand Island dressing .</p>
+      <button>$8.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Matt's Bar.jpg" alt="Matt's Bar" style="width:100%">
+      <h3>Matt's Bar</h3>
+      <p>Beef stuffed with cheese topped fried onions.</p>
+      <button>$9.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="The General Muir.jpg" alt="The General Muir" style="width:100%">
+      <h3>The General Muir</h3>
+      <p>Bacon cheeseburger, with American cheese, shaved white onion, house bread-and-butter pickles, and crispy pastrami in place of the bacon.</p>
+      <button>$12.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="The Spotted Pig.jpg" alt="The Spotted Pig" style="width:100%">
+      <h3>The Spotted Pig</h3>
+      <p>Juicy, and grilled, topped with creamy, salty Roquefort cheese, sandwiched in a bun that straddles the line between Wonderbread and Briôche, and is served with a mound of crisp rosemary-garlic</p>
+      <button>$14.00</button>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">5</a>
+      <a href="American.html" class="w3-bar-item w3-black w3-button">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About The American Food</h3><br>
+    <img src="AmericanFood.jpg" alt="Me" class="w3-image" style="display:block;margin:auto; width: 1000px; height: 500px;">
+    <div class="w3-padding-32">
+      <h4><b>"Good Food come in a bun!"</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>New American cuisine is generally a type of fusion cuisine which assimilates flavors from the melting pot of traditional American cooking techniques mixed with foreign and sometimes molecular gastronomy components. New American cuisine features innovative use of seasoning and sauces.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="Carolina-Crab-Boil.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="Pie 'n Burger.jpg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

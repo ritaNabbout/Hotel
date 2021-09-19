@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    html{
+      scroll-behavior: smooth;
+    }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  }
+  
+  .login{
+  background-color: lightseagreen;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Column container */
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  .btn {
+    background-color: lightseagreen;
+    color: white;
+    padding: 13px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="login.php"  class="login">Login</a>
+        <a href="homepage.html">Back<<</a>
+      </div>
+      <div class="container" style="margin-left:20px;">
+        <h4>“I think it’s very important to have a feedback loop, where you’re constantly thinking about what you’ve done and how you could be doing it better.” Elon Musk</h4>
+        <p>Were the staff friendly and helpful?</p>
+        <form>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">No
+          </label>
+        </form>
+        <p>Did the staff respond quickly?</p>
+        <form>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">No
+          </label>
+        </form>
+        <p>Was your room comfortable and clean?</p>
+        <form>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">No
+          </label>
+        </form>
+        <p>Did You Enjoy Our Food?</p>
+        <form>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">No
+          </label>
+        </form>
+        <p>Rating</p>
+        <form>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" >1<span class="fa fa-star checked"></span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">2<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" >3<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">4<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio"checked>5<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+          </label>
+        </form>
+      </div>
+      <div class="container" style="margin-left:20px;">
+        <p>Why Did You Choose to Stay at This Hotel?</p>
+        <form>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Online search
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Price
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Word of mouth
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Reviews
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Repeat customer
+          </label>
+        </form>
+        <p>What can we do to improve our service?</p>
+        <input type="text" style="height:200px; width: 300px;">
+        <input type="submit" value="submit" class="btn" style="background-color:lightseagreen">
+      </div>
+      
+</body></html>

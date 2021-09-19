@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="BalineseFood.html" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="Italian.html" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="Arabic.html" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="Àlafrançaise.html" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="Asian.html" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="American.html" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="#Desserts" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        </div>
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;"> Desserts</div>
+  </div>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px"><h4 style="font-style: italic; font-weight: bold;">Balinese Desserts</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+      <img src="Bubur Sumsum.jpg" alt="Bubur Sumsum" style="width:100%"id="Desserts">
+      <h3>Bubur Sumsum</h3>
+      <p>Sweet and salty coconut rice porridge,It's usually served cool with palm sugar syrup and occasionally sweet potato dumplings.</p>
+      <button>$5.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Batun Bedil.jpg" alt="Batun Bedil" style="width:100%">
+      <h3>Batun Bedil</h3>
+      <p>Sticky rice cake served with a brown sugar sauce.</p>
+      <button>$4.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Klepon.jpg" alt="Klepon" style="width:100%">
+      <h3>Klepon</h3>
+      <p>Glutinous rice flour mixed with normal rice flour,and has the palm sugar filling. The outer layer is covered with shredded coconut.</p>
+      <button>$5.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Bubur Injin.jpg" alt="Bubur Injin" style="width:100%">
+      <h3>Bubur Injin</h3>
+      <p>Glutinous black rice,coconut milk sauce topped with fresh fruit like strawberries, pomegranate or jack fruit.</p>
+      <button>$6.00</button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px"></div><h4 style="font-style: italic; font-weight: bold;">International Desserts</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Tiramisu.jpg" alt="Tiramisu" style="width:100%">
+      <h3>Tiramisu</h3>
+      <p>This classic Italian dessert is made up of sponge fingers soaked in coffee, traditionally layered between a coffee-flavoured mascarpone cheese whipped with eggs and sugar, and then topped with cocoa. </p>
+      <button>$10.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Gulab Jamun.jpg" alt="Gulab Jamun" style="width:100%">
+      <h3>Gulab Jamun</h3>
+      <p>Indian deep-fried doughnut in bitesize form, soaked in a sweet syrup.</p>
+      <button>$7.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="S’mores.jpg" alt="S’mores" style="width:100%">
+      <h3>S’mores</h3>
+      <p>USA S’mores :Two biscuits sandwiched together with melted chocolate and marshmallows.</p>
+      <button>$4.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Churros.jpg" alt="Churros " style="width:100%">
+      <h3>Churros </h3>
+      <p>choux-like pastry, piped through a star-shaped nozzle into hot oil where they’re fried until golden brown and then sprinkled with sugar.</p>
+      <button>$4.75</button>
+    </div>
+  </div>
+
+  
+
+  <!-- third Photo Grid--> 
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+      <img src="Lamingtons.jpg" alt="Lamingtons " style="width:100%"id="Àlafrançaise">
+      <h3>Lamingtons </h3>
+      <p>Vanilla sponge covered in chocolate and desiccated coconut, but they can also contain a layer of jam sandwiching two lamington halves.</p>
+      <button>$8.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Malva Pudding.jpg" alt="Malva Pudding " style="width:100%">
+      <h3>Malva Pudding</h3>
+      <p>from South Africa, and is a gooey sponge cake made with apricot jam and served warm with a creamy sauce or custard.</p>
+      <button>$8.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Baklava.jpg" alt="Baklava" style="width:100%">
+      <h3>Baklava</h3>
+      <p>Middle Eastern Baklava is made from layers of paper-thin filo pastry, butter, chopped nuts and a sweet syrup fragranced with rose or orange blossom water. It’s normally made in big tins, baked and then drizzled with even more syrup before cutting into smaller pieces. </p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Pasteis de Nata.jpg" alt="Pasteis de Nata" style="width:100%">
+      <h3>Pasteis de Nata</h3>
+      <p>Crispy and flaky pastry shell, filled to the brim with a sweet, creamy custard centre.</p>
+      <button>$7.75</button>
+    </div>
+  </div>
+  
+  
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">5</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-black w3-button">7</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>All About Desserts!</h3><br>
+    
+    <img src="Desserts.jpg" alt="Me"  style="display:block;margin:auto; width: 1000px; height: 500px;">
+    <div class="w3-padding-32">
+      <h4><b>There is no better way to bring people together than with desserts.</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Dessert can apply to many confections, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, sweet soups, tarts and fruit salad. Fruit is also commonly found in dessert courses because of its naturally occurring sweetness.</p>
+    </div>
+  </div>
+  <hr>
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="Tiramisu.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="Bubur Injin.jpg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: rgb(115, 171, 185);
+  font-size: 30px;
+  color: white;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: rgb(189, 222, 224);
+  color: black
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: lightgrey;
+}
+</style>
+<body>
+  <div class="callout">
+    <div class="callout-header">CheckBox Hint!</div>
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+    <div class="callout-container">
+      <p><b>Uncheck the breakfast ,lunch and dinner checkBox to see all the meals at the same time!</b></p>
+    </div>
+  </div>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#Balinese" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="Italian.html" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="Arabic.html" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="Àlafrançaise.html" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="Asian.html" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="American.html" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="Desserts.html" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        <label for="myCheck"></label> 
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+        <checkbox aria-checked="myFunction()">Breakfast</checkbox>
+        <label for="myCheck2"></label> 
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+        <checkbox aria-checked="myFunction()">lunch</checkbox>
+        <label for="myCheck3"></label> 
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+        <checkbox aria-checked="myFunction()">Dinner</checkbox>
+        
+        
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script></div>
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Balinese Food</div>
+  </div>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div id="myDIV">
+  <!-- First Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Breakfast</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="BananasAndBlackRiceInCoconutMilk.jpg" alt="Bananas And Black Rice In Coconut Milk" style="width:100%"id="Balinese">
+      <h3>Bananas And Black Rice In Coconut Milk </h3>
+      <p>The rice crisps are optional, so if they seem like a bridge too far, opt for coarsely chopped salted peanuts instead. Begin this recipe a day ahead to dry out the jasmine rice and soak the black rice.</p>
+      <button>$7.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="KalimantanBanana.jpg" alt=" Kalimantan Banana" style="width:100%">
+      <h3> Kalimantan Banana</h3>
+      <p>Fried bananas,presented in different ways from banana fritters to slender fried planks.</p>
+      <button>$5.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BubarAyam.jpg" alt="Bubar Ayam" style="width:100%">
+      <h3>Bubar Ayam</h3>
+      <p >Shredded chicken meat and condiments such as chopped scallion and crispy fried shallots on top of the rice, and sometimes served with celery, preserved salted vegetables, or chicken broth over the top.</p>
+      <button>$8.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BananaPancakes.jpg" alt="Banana Pancakes" style="width:100%">
+      <h3>Banana Pancakes</h3>
+      <p>Banana known as fruit with high carbohydrate. Along with flour in pancakes, it makes you stomach full and keep you healthy too.</p>
+      <button>$6.00</button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid--><h4 style="font-style: italic; font-weight: bold;">Floating Breakfast</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="FloatingBreakfastSmall.jpg" alt="FloatingBreakfastSmall" style="width:100%">
+      <h3>Small Floating Breakfast</h3>
+      <button>$20.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="FloatingBreakfastMedium.jpg" alt="FloatingBreakfastMedium" style="width:100%">
+      <h3>Medium Floating Breakfast</h3>
+      <button>$35.50</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="floatingBreakfastLarge.jpg" alt="floatingBreakfastLarge" style="width:100%">
+      <h3>Large Floating Breakfast</h3>
+      <button>$55.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="HugeFloatingBreakfast.jpg" alt="HugeFloatingBreakfast" style="width:100%">
+      <h3>Huge Floating Breakfast</h3>
+      <button>$80.00</button>
+    </div>
+  </div></div>
+
+  <div id="myDIV1">
+
+  <!-- third Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Lunch</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="satay.jpg" alt="satay" style="width:100%"id="Balinese">
+      <h3>Satay</h3>
+      <p>Grilled meats served with spicy sauce. The meat usually consists of diced or sliced chicken, goat, mutton, beef and pork, but you'll also find satay that's made with fish, tofu, eggs or minced blends.</p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="NasiAyamAndNasiCampur.jpg" alt="Nasi ayam and nasi campur" style="width:100%">
+      <h3>Nasi ayam and nasi campur</h3>
+      <p>plate of white rice comes with different elements of Balinese food, such as a portion of babi guling (roast suckling pig) or betutu (spiced chicken or duck), mixed vegetables, and a dab of spicy sambal matah (Balinese sauce).</p>
+      <button>$15.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BebekAndAyamBetutu.jpg" alt="Bebek and ayam betutu" style="width:100%">
+      <h3>Bebek and ayam betutu</h3>
+      <p>Roast suckling pig,with traditional spices, wrapped in banana leaves, then enveloped tight in the bark of a banana trunk.</p>
+      <button>$18.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BabiGuling.jpg" alt="Babi guling" style="width:100%">
+      <h3>Babi Guling</h3>
+      <p>spit-roast pig stuffed with rich traditional spices and vegetable mixes such as cassava leaves, slowly rolled over (guling means "to roll" in Indonesian) a coal fire. </p>
+      <button>$18.50</button>
+    </div>
+  </div>
+  
+  <!-- fourth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Tahuandtempeh.jpg" alt="Tahu and tempeh" style="width:100%">
+      <h3>Tahu and tempeh</h3>
+      <p>Tahu (tofu) and tempeh come in different preparations – some as savoury snacks, and others as accompaniments and main-course dishes. These soybean curds can be fried, stuffed and battered.</p>
+      <button>$9.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="PepesAndTum.jpg" alt="Pepes and tum" style="width:100%">
+      <h3>Pepes And Tum</h3>
+      <p>Pepes uses banana leaf as food wrappings.fish as pepes ikan, but meat, chicken, tofu or vegetables are common ingredients as well.Tum commonly contains minced pork mixed with spiced paste.</p>
+      <button>$11.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="NasiGoreng.jpg" alt="NasiGoreng" style="width:100%">
+      <h3>Nasi Goreng</h3>
+      <p>Stir-Frying cooked rice with a combination of meats and vegetables, ranging from scrambled eggs, diced beef, strips of chicken, shrimp, anchovies, lamb, crab, green peas, onions, shallots and a blend of sweet soy sauce and hot chilli sauce.</p>
+      <button>$12.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="MieGoreng.jpg" alt=" Mie Goreng" style="width:100%">
+      <h3> Mie Goreng</h3>
+      <p>Fried noodles is often served with vegetables and a choice of chicken, shrimp or pork. Sometimes it served with a fried egg on top, chicken sate sticks, prawn crackers and peanut sauce. Oh, and don’t forget the pickled vegetables.</p>
+      <button>$15.00</button>
+    </div>
+  </div>
+   <!-- fifth Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="MiniRijsttafel.jpg" alt="MiniRijsttafel" style="width:100%">
+      <h3>Mini Rijsttafel</h3>
+      <p>smoked duck, chicken with sambal, prawns, pork & chicken sates, sayur urap (mixed Bali vegetables), potato croquettes, tempe, tofu and yellow nasi tumpeng (rice cone).</p>
+      <button>$17.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="SpringRolls.jpg" alt="Spring Rolls" style="width:100%">
+      <h3>Spring Rolls</h3>
+      <p> Filled with mixed vegetables and minced chicken, served with a peanut sauce or a sweet chilli sauce.</p>
+      <button>$7.75</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Gado-Gado.jpg" alt="Gado-Gado" style="width:100%">
+      <h3>Gado-Gado</h3>
+      <p>Vegetable salad bathed in a classic peanut sauce.At its base are boiled long beans, spinach, potato, corn, egg and bean sprouts coupled with cucumber, tofu and tempe.</p>
+      <button>$11.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Lawar.jpg" alt="Lawar" style="width:100%">
+      <h3>Lawar</h3>
+      <p>is made by mixing chopped meat with various green vegetables and grated coconut. As for the meat, the choices are either beef, chicken, duck, pork, turtle, or a combination of those.</p>
+      <button>$20.00</button>
+    </div>
+  </div></div>
+  <div id="myDIV2">
+   <!-- sixth Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Dinner</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="Balinese-Green-Bean-Salad.jpg" alt="Balinese-Green-Bean-Salad" style="width:100%"id="Balinese">
+      <h3>Balinese Green Bean Salad</h3>
+      <p>Green beans, coconut milk, kecap manis, sesame oil, lemon.</p>
+      <button>$8.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BalineseChickenSoup.jpg" alt="Balinese Chicken Soup" style="width:100%">
+      <h3>Balinese Chicken Soup</h3>
+      <p>Cold coconut milk + bone-broth based soup</p>
+      <button>$11.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="BaliInABowl.jpg" alt="BALI IN A Bowl" style="width:100%">
+      <h3>Bali In A Bowl</h3>
+      <p>Creamy Carrot-Ginger Soup, with sunny tropical flavors.</p>
+      <button>$13.25</button>
+    </div>
+    <div class="w3-quarter">
+    <img src="NasiGoreng.jpg" alt="NasiGoreng" style="width:100%">
+    <h3>Nasi Goreng</h3>
+    <p>Stir-Frying cooked rice with a combination of meats and vegetables, ranging from scrambled eggs, diced beef, strips of chicken, shrimp, anchovies, lamb, crab, green peas, onions, shallots and a blend of sweet soy sauce and hot chilli sauce.</p>
+    <button>$12.50</button>
+  </div>
+  </div>
+  
+  <!-- seventh Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="SpringRolls.jpg" alt="Spring Rolls" style="width:100%">
+      <h3>Spring Rolls</h3>
+      <p> Filled with mixed vegetables and minced chicken, served with a peanut sauce or a sweet chilli sauce.</p>
+      <button>$7.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Tahuandtempeh.jpg" alt="Tahu and tempeh" style="width:100%">
+      <h3>Tahu and tempeh</h3>
+      <p>Tahu (tofu) and tempeh come in different preparations – some as savoury snacks, and others as accompaniments and main-course dishes. These soybean curds can be fried, stuffed and battered.</p>
+      <button>$9.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="EggWithTraditionalBalineseFlavor.jpg" alt="EggWithTraditionalBalineseFlavor" style="width:100%">
+      <h3>Eggs With Traditional Balinese Flavor</h3>
+      <p>Boiling whole eggs with guava leaves, shallot skin and garlic skin, until they turn a deep, dark brown color.  Then, the eggs are cooked again in an aromatic Balinese spice paste.</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Rujak.jpg" alt="Rujak" style="width:100%">
+      <h3>Rujak</h3>
+      <p>Fruit and vegetable salad that is served with a thick sauce made of chilli and peanuts.It includes water apple, raw unripe mango, pineapple, cucumber, or sweet potato</p>
+      <button>$11.00</button>
+    </div>
+  </div></div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">5</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About The Balinese Food</h3><br>
+    <img src="BalineseFood.jpg" alt="Me" class="w3-image" style="display:block;margin:auto; width: 1000px; height: 500px;">
+    <div class="w3-padding-32">
+      <h4><b>"Some Like It spicy!"</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>My favorite time of day is to get up and eat leftovers from dinner, especially spicy food.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="Balinese-Green-Bean-Salad.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="satay.jpg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

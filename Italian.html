@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+  
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {
+  top: 10;
+  padding:20px;
+}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+
+
+</style>
+
+<body>
+  
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="BalineseFood.html" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="#Italian" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="Arabic.html" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="Àlafrançaise.html" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="Asian.html" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="American.html" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="Desserts.html" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        <label for="myCheck"></label> 
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+        <checkbox aria-checked="myFunction()">Breakfast</checkbox>
+        <label for="myCheck2"></label> 
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+        <checkbox aria-checked="myFunction()">lunch</checkbox>
+        <label for="myCheck3"></label> 
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+        <checkbox aria-checked="myFunction()">Dinner</checkbox>
+        
+        
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script></div>
+          <div class="header">
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Italian Food</div>
+  </div></div>
+</div>
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <div id="myDIV">
+  <!-- First Photo Grid-->
+ <h4 style="font-style: italic; font-weight: bold;">Breakfast</h4>
+    <div class="w3-row-padding w3-padding-16 w3-center" >
+      <div class="w3-quarter" >
+       
+        <img src="PoachedEggs.jpg" alt="PoachedEggs" style="width:100%"id="Italian">
+        <h3>Poached Eggs</h3>
+        <p>hot verses cold, creamy against a light acidic tomato bruscetta, plus the salty tang of prosciutto and earthy taste of olive combine to create harmony of simplicity.  </p>
+        <button>$7.50</button>
+      </div>
+      <div class="w3-quarter">
+        <img src="Pancetta.jpg" alt=" Pancetta" style="width:100%">
+        <h3> Pancetta</h3>
+        <p>Italian form of bacon thin sliced.  This cured meat packs all the awesome flavor of bacon, but with less fat. The egg cup recipe uses the thin slices from the deli, egg whites & a small portion of sharp cheddar (rather than a light/reduced fat cheese), since it packs a lot of flavor.</p>
+        <button>$9.00</button>
+      </div>
+      <div class="w3-quarter">
+        <img src="BRUSCHETTA.jpg" alt="BRUSCHETTA" style="width:100%">
+        <h3>BRUSCHETTA</h3>
+        <p >Bread, cheese, & fresh flavors.A drizzle of pesto, fresh tomato, or sautéed, chopped mushrooms would also work fabulously.</p>
+        <button>$5.00</button>
+      </div>
+      <div class="w3-quarter">
+        <img src="continental.jpg" alt="continental" style="width:100%">
+        <h3>Continental</h3>
+        <p>Light breakfast tray is full of color and necessary fiber. Toast with jam and fruits</p>
+        <button>$6.00</button>
+      </div>
+    </div>
+    
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="OmletteAndSalad.jpg" alt="OmletteAndSalad" style="width:100%">
+        <h3>Omlette And Salad</h3>
+        <p>omlette with sausages eaten with pita bread and salad</p>
+        <button>$8.50</button>
+      </div>
+      <div class="w3-quarter">
+        <img src="cappuccino-croissant.jpg" alt="cappuccino-croissant" style="width:100%">
+        <h3>Croissant and cappuccino</h3>
+        <p>Typical breakfast, Croissant and a cup of sweet cappuccino</p>
+        <button>$12.50</button>
+      </div>
+      
+      <div class="w3-quarter">
+        <img src="Casserole.jpg" alt="Casserole" style="width:100%">
+        <h3>Casserole</h3>
+        <p>Casserole has layers of salami, ham, eggs and cheese</p>
+        <button>$7.55</button>
+      </div>
+      <div class="w3-quarter">
+        <img src="Breakfast-Pizza.jpg" alt="BreakfastPizza" style="width:100%">
+        <h3>Breakfast Pizza</h3>
+        <p>Breakfast Pizza with Crispy Prosciutto, Caramelized Onions, Mushrooms & Arugula</p>
+        <button>$11.00</button>
+      </div>
+    </div>
+  </div>
+  <div id="myDIV1">
+  <!-- third Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Lunch</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="FARRO-SALAD.jpg" alt="FARROSALAD" style="width:100%"id="Italian">
+      <h3>FARRO SALAD</h3>
+      <p>This salad is made with juicy and sweet cherry tomatoes, peppery radishes, fragrant fresh herbs, and a zingy vinaigrette.</p>
+      <button>$10.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Italian-Salad.jpg" alt="ItalianSalad" style="width:100%">
+      <h3>Italian Salad</h3>
+      <p>Chopped lettuce, cucumbers, artichokes, tomatoes, olives, avocado, and pepperoncini.Add toppings: croutons and Parmesan cheese! </p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="simple-italian-salad.jpg" alt="simple-italian-salad" style="width:100%">
+      <h3>The Italian Simple Salad</h3>
+      <p>Fresh vegetable salad plate of tomatoes, italian mix, pepper, radish, green sprouts and flax seeds.</p>
+      <button>$8.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Veggie-Pasta-Salad.jpg" alt="Veggie-Pasta-Salad" style="width:100%">
+      <h3>Veggie Pasta Salad</h3>
+      <p>Pasta, english cucumber, cherry tomatoes, black olives,red pepper, red onion,artichoke hearts, cubed cheddar cheese, finely grated Parmesan cheese and Salt and pepper. </p>
+      <button>$12.75</button>
+    </div>
+  </div>
+  
+  <!-- fourth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="BroccoliPasta.jpg" alt="BroccoliPasta" style="width:100%">
+      <h3>Broccoli Pasta</h3>
+      <p>Pasta , sautè it in the pan with the broccoli, Garlic and Oil</p>
+      <button>$18.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="spicy-italian-sausage-pasta.jpg" alt="spicy-italian-sausage-pasta" style="width:100%">
+      <h3>Spicy Italian Sausage Pasta</h3>
+      <p>Spicy Italian sausage, tomatoes, garlic, cream, lots of parmesan cheese, and a touch of fresh basil</p>
+      <button>$21.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="PastaELenticchie.jpg" alt="PastaELenticchie" style="width:100%">
+      <h3>Pasta e Lenticchie</h3>
+      <p>olive oil, chopped yellow onion, carrot, garlic, Kosher salt and freshly ground black pepper, lentils,tomato paste, thyme, bay leaf,red pepper flakes, whole milk,tubular pasta (such as ziti, trenne or rigatoni) and Grated Parmesan.</p>
+      <button>$19.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="FruttiDiMare.jpg" alt="FruttiDiMare" style="width:100%">
+      <h3>Frutti di Mare</h3>
+      <p>pasta with baby clams, mussels, squid and shrimp in a thick red Arrabiata sauce.</p>
+      <button>$28.00</button>
+    </div>
+  </div>
+   <!-- fifth Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="pizzamargherita1.jpg" alt="PIZZAMARGHERITA" style="width:100%">
+      <h3>PIZZA MARGHERITA</h3>
+      <p>Made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil.</p>
+      <button>$9.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="pizza-ortolana.jpg" alt="pizza-ortolana" style="width:100%">
+      <h3>Pizza Ortolana</h3>
+      <p>pizza dough which is smeared with tomato sauce, topped with mozzarella and grilled slices of eggplant and zucchini,drizzled with olive oil and topped with fresh basil.</p>
+      <button>$10.75</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Pizza vegetarian.jpg" alt="pizzaVegetarian" style="width:100%">
+      <h3>Pizza Vegetarian</h3>
+      <p>Delicious raw veggies are placed on a bed of an authentic pizza base and topped with pizza sauce, raw veggies, plenty of mozzarella cheese + parmesan cheese, a drizzle of garlic oil.</p>
+      <button>$9.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Pizza-Capricciosa.jpg" alt="Pizza-Capricciosa" style="width:100%">
+      <h3>Pizza Capricciosa</h3>
+      <p>Prepared with mozzarella cheese, Italian baked ham, mushroom, artichoke and tomato. Types of edible mushrooms used may include cremini (white mushrooms) and others.</p>
+      <button>$10.75</button>
+    </div>
+  </div></div>
+  <div id="myDIV2">
+   <!-- sixth Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Dinner</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="eggplant-parmesan.jpg" alt="eggplant-parmesan" style="width:100%"id="Italian">
+      <h3>Eggplant parmesan</h3>
+      <p>Custardy eggplant slathered in tangy sauce, and a crispy, cheesy top from the oven.</p>
+      <button>$14.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="caponata-with-pine-nuts.jpg" alt="caponata-with-pine-nuts" style="width:100%">
+      <h3>Caponata with Pine Nuts</h3>
+      <p>This caponata uses a technique called a "cold fry." Instead of frying the vegetables in preheated, hot oil, you combine the vegetables and room temperature oil in a pot and heat them up together.</p>
+      <button>$11.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="classic-marinara-sauce.jpg" alt="classic-marinara-sauce" style="width:100%">
+      <h3>Classic Marinara Sauce </h3>
+      <p>The little black dress of Italian-American cooking. This recipe is from Palizzi Social Club in Philadelphia, PA.</p>
+      <button>$13.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="radicchio-fennel-and-olive-panzanella.jpg" alt="radicchio-fennel-and-olive-panzanella" style="width:100%">
+      <h3>Radicchio, Fennel, and Olive Panzanella Salad</h3>
+      <p> Make sure to have fresh bread on hand to soak up any extra dressing in the bowl.</p>
+      <button>$7.00</button>
+    </div>
+  </div>
+  
+  <!-- seventh Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="fresh-pasta-with-clams-and-hot-italian-sausage.jpg" alt="fresh-pasta-with-clams-and-hot-italian-sausage" style="width:100%">
+      <h3>Fresh Pasta with Clams and Hot Italian Sausage</h3>
+      <p>Rolling out and shaping this handmade pasta together is the fun part. Make the dough a day ahead, wrap in plastic, and keep chilled.</p>
+      <button>$10.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="ligurian-pesto-with-spaghetti.jpg" alt="ligurian-pesto-with-spaghetti" style="width:100%">
+      <h3>Ligurian Pesto with Spaghetti</h3>
+      <p>This recipe makes more pesto than you'll need. Serve the extra with vegetables or fish, or spread it on sandwiches./p>
+      <button>$11.50</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="potato-gnocchi.jpg" alt="potato-gnocchi" style="width:100%">
+      <h3>Potato Gnocchi</h3>
+      <p>A classic tomato sauce and hands-off roasted pork shoulder are the ultimate go-withs.</p>
+      <button>$7.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="steamed-mussels-with-fennel-and-tarragon.jpg" alt="steamed-mussels-with-fennel-and-tarragon" style="width:100%">
+      <h3>Steamed Mussels with Fennel and Tarragon</h3>
+      <p>De Laurentiis uses Peroni, an Italian beer, for this 20-minute dish, but any light-bodied lager will work and make a perfect drink pairing as well.</p>
+      <button>$20.00</button>
+    </div>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-black w3-button">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">5</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About The Italian Food</h3><br>
+    <img src="italianFood.jpg" alt="Me" class="w3-image" style="display:block;margin:auto; width: 1000px; height: 500px;">
+    <div class="w3-padding-32">
+      <h4><b>"Life is a combination of magic and pasta."</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Italian food is more than just pizza and spaghetti. There’s a wide range of ingredients, flavors, and dishes to experiment with in your own home.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="PoachedEggs.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="classic-marinara-sauce.jpg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

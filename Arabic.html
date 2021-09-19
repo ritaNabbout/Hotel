@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="BalineseFood.html" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="Italian.html" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="#Arabic" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="Àlafrançaise.html" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="Asian.html" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="American.html" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="Desserts.html" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        <label for="myCheck"></label> 
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+        <checkbox aria-checked="myFunction()">Breakfast</checkbox>
+        <label for="myCheck2"></label> 
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+        <checkbox aria-checked="myFunction()">lunch</checkbox>
+        <label for="myCheck3"></label> 
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+        <checkbox aria-checked="myFunction()">Dinner</checkbox>
+        
+        
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script></div>
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Arabic Food</div>
+  </div>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div id="myDIV">
+  <!-- First Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Breakfast</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+ 
+      <img src="manakish.jpg" alt="Manakish" style="width:100%"id="Arabic">
+      <h3>The Perfect Mankoush, A Real Arabic Breakfast</h3>
+      <p>Is a popular Levantine food consisting of dough topped with thyme, cheese, keshek or ground meat</p>
+      <button>$5.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="eggs-arabicFood.jpg" alt="Eggs" style="width:100%">
+      <h3>Let Me Tell You About This Plate</h3>
+      <p>This casual assembly of eggs, ricotta and chargrilled vegetables makes an extraordinary weekend brunch.</p>
+      <button>$9.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="shakshuka-arabicFood.jpg" alt="shakshuka" style="width:100%">
+      <h3>The shakshuka</h3>
+      <p>Here's a Maghrebi dish of eggs poached in a sauce of tomatoes, olive oil, peppers, onion and garlic, and commonly spiced with cumin, paprika, cayenne pepper, and nutmeg. Egg shakshouka evolved from an Ottoman meat stew, into a vegetarian egg-based dish</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="kishk.jpg" alt="kishk" style="width:100%">
+      <h3>The Egyptian dish Kishk </h3>
+      <p>Kishk is an Egyptian creamy rice pudding dish often topped with caramelized onions and poured over rice or eaten with pita bread.</p>
+      <button>$12.00</button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="foul-arabicFood.jpg" alt="foul" style="width:100%">
+      <h3>"Foul" mashed Fava beans meal</h3>
+      <p>It is usually cooked with olive oil, cumin, and could be served or garnished with Tahini chopped onions, garlic, parsley, lemon juice, or tomato sauce. The popular Egyptian dish is usually eaten with pita bread.</p>
+      <button>$8.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="fatteh-arabicFood.jpg" alt="fatteh" style="width:100%">
+      <h3>Fatteh (Pita with Chickpeas and Yogurt)</h3>
+      <p>Arabic dish consisting of pieces of fresh, toasted, grilled, or stale flatbread covered with other ingredients that vary according to region</p>
+      <button>$8.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="hummus.jpg" alt="hummus" style="width:100%">
+      <h3>Hummus</h3>
+      <p>Mashed chickpeas blended with tahini, lemon juice, and garlic.The standard garnish in the Middle East includes olive oil, a few whole chickpeas, parsley, and paprika.</p>
+      <button>$4.55</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="morningMezzePlatter.jpg" alt="platter" style="width:100%">
+      <h3>The Amazing Morning Platter</h3>
+      <p>A few variations of hummus (classic, red pepper hummus, white bean hummus), Labneh, Cheese, Flat bread, Olives, Meats and Veggies.</p>
+      <button>$15.75</button>
+    </div>
+  </div>
+
+  </div>
+  <div id="myDIV1">
+  <!-- third Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Lunch</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+      <img src="tabbouleh.jpg" alt="tabbouleh" style="width:100%"id="Arabic">
+      <h3>The Lebanese main salad "Tabbouleh"</h3>
+      <p>Is made mostly of finely chopped parsley, with tomatoes, mint, onion, bulgur (soaked, not cooked), and seasoned with olive oil, lemon juice, salt and sweet pepper. Some variations add lettuce, or use semolina instead of bulgur.</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+    
+      <img src="fattouch.jpg" alt="fattouch" style="width:100%">
+      <h3>Fattouch</h3>
+      <p>Levantine salad made from toasted or fried pieces of khubz (Arabic flat bread) combined with mixed greens and other vegetables, such as radishes and tomatoes.</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="coldMezzePlatter.jpg" alt="coldMezzePlatter" style="width:100%">
+      <h3>The Cold Mezze Platter</h3>
+      <p>Lebanese cold mezze platter which refers to Hummus, Baba ghanouj, Mutable and labna.</p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="stuffed grape leaves1.jpg" alt="grapeLeaves" style="width:100%">
+      <h3>Warak Enab</h3>
+      <p>Warak Enab translates to Middle Eastern style grape leaves stuffed with spiced rice and slowly cooked into mouthwatering perfection alongside tender lamb chops in a tangy lemon broth.</p>
+      <button>$10.00</button>
+    </div>
+  </div>
+  
+  <!-- fourth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="LebaneseMeat.jpg" alt="foul" style="width:100%">
+      <h3>Raw meat dish</h3>
+      <p>It consists of minced raw lamb mixed with fine bulgur and spices. And some raw meat balls.</p>
+      <button>$18.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="ArabicMixedMeatGrill.jpg" alt="grilledMeat" style="width:100%">
+      <h3>Large Mixed Grilled Meat Platter</h3>
+      <p>16 skewers of shish kabab ,4 lamb kufta kabab ,4 chicken koftah , 4 shosh tawook , grilled onions and tomatoes</p>
+      <button>$25.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Mansaf.jpg" alt="Mansaf" style="width:100%">
+      <h3>Mansaf</h3>
+      <p>Jordanian dish made of lamb cooked in a sauce of fermented dried yogurt and served with rice</p>
+      <button>$13.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="falafel.jpg" alt="platter" style="width:100%">
+      <h3>falafel</h3>
+<p>Deep-fried ball or patty-shaped fritter made from ground chickpeas, fava beans, or both.They are wrapped in a flatbreadare topped with salads, pickled vegetables, hot sauce, and drizzled with tahini-based sauces.</p>
+      <button>$7.00</button>
+    </div>
+  </div>
+   <!-- fifth Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="shawarma-chicken-sandwich-garlic.jpg" alt="shawerma" style="width:100%">
+      <h3>Shawarma</h3>
+      <p>Meat cut into thin slices, stacked in a cone-like shape, and roasted on a slowly-turning vertical rotisserie or spit.Thin slices are shaved off the cooked surface as it continuously rotates.</p>
+      <button>$8.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="HotMezze.jpg" alt="Mezze" style="width:100%">
+      <h3>Hot Mezze Plate</h3>
+      <p>Pastry platter consisting two of Meat Kebbe, Cheese Roll, Spinach Fatayer, Vegetable Samosa and Meat Sambousek</p>
+      <button>$12.75</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="spicyFish.jpg" alt="fish" style="width:100%">
+      <h3>Spicy Fish</h3>
+      <p>Baked fish, a spicy tahini sauce and other spices and ingredients and can be eaten as a sandwich, or served in plates.</p>
+      <button>$13.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="mloukhiyeh.jpg" alt="mloukhiyeh" style="width:100%">
+      <h3>Mloukhiyeh</h3>
+      Mulukhiyah is cooked with chicken or at least chicken stock for flavor and is served with white rice, accompanied with lemon or lime.
+      <button>$14.75</button>
+    </div>
+  </div>
+  <div id="myDIV2">
+   <!-- sixth Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Dinner</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+      <img src="sfiha.jpg" alt="sfiha" style="width:100%"id="Arabic">
+      <h3>Sfiha for the night</h3>
+      <p>Flatbread cooked with a minced meat topping, often lamb flavored with onion, tomato, pine nuts, and spices.</p>
+      <button>$4.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="shishBarak.jpg" alt="shishBarak" style="width:100%">
+      <h3>ShishBarak</h3>
+      <p>  Dumplings filled with seasoned lamb, onions, and pine nuts that are boiled, baked, or fried and served in a warm yogurt sauce with melted butter, mint, sumac, and more toasted pine nuts.</p>
+      <button>$16.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="kishk.jpg" alt="kishk" style="width:100%">
+      <h3>The Egyptian dish Kishk </h3>
+      <p>Kishk is an Egyptian creamy rice pudding dish often topped with caramelized onions and poured over rice or eaten with pita bread.</p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="shawarma-chicken-and-beef-plate.jpg" alt="shawerma" style="width:100%">
+      <h3>Beef and chicken shawarma plate</h3>
+      <p>Shawarma served with hummus and salad</p>
+      <button>$7.00</button>
+    </div>
+  </div>
+  
+  <!-- seventh Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="fattouch.jpg" alt="fattouch" style="width:100%">
+      <h3>Fattouch</h3>
+      <p>Levantine salad made from toasted or fried pieces of khubz (Arabic flat bread) combined with mixed greens and other vegetables, such as radishes and tomatoes.</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="fatteh-arabicFood.jpg" alt="fatteh" style="width:100%">
+      <h3>Fatteh (Pita with Chickpeas and Yogurt)</h3>
+      <p>Arabic dish consisting of pieces of fresh, toasted, grilled, or stale flatbread covered with other ingredients that vary according to region.</p>
+      <button>$8.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="hummus.jpg" alt="hummus" style="width:100%">
+      <h3>Hummus</h3>
+      <p>mashed chickpeas blended with tahini, lemon juice, and garlic.[3] The standard garnish in the Middle East includes olive oil, a few whole chickpeas, parsley, and paprika</p>
+      <button>$4.55</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="chickenAndBeafPlatter.jpg" alt="platter" style="width:100%">
+      <h3>The perfect Dinner Platter</h3>
+      <p>Grilled chicken and Beef , served with fries and dipping sauces.</p>
+      <button>$30.00</button>
+    </div>
+  </div>
+  </div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-black w3-button">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">5</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About The Arabic Food</h3><br>
+    <img src="ArabicMenu.jpg" alt="Me" class="w3-image" style="display:block;margin:auto; width: 1000px; height: 500px;" >
+    <div class="w3-padding-32">
+      <h4><b>“Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious.”</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>These cuisines are centuries old and reflect the culture of trading in spices, herbs, and foods. The regions have many similarities, but also unique traditions. They have also been influenced by climate, cultivation, and mutual commerce.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="fatteh-arabicFood.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="foul-arabicFood.jpg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

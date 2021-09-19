@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<title>Accommodation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.btn {
+  background-color: lightseagreen;
+  color: white;
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.login{
+background-color: lightseagreen;
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="login.php" class="login">Login</a>
+  <a href="homepage.html" >Home</a>
+  <a href="AboutUs.html">About Us</a>
+  <a href="#rooms" >Rooms</a>
+  <a href="BalineseFood.html">Food Menu</a>
+  <a href="Cinema.html" >Cinema</a>
+  <a href="#contact">Contact</a>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content" style="max-width:1500px;">
+        <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i><input type="search"> Search availability</button>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1532px;">
+
+  <div class="w3-container w3-margin-top" id="rooms">
+    <h3>Rooms</h3>
+    <p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
+  </div>
+
+  <div class="w3-row-padding w3-padding-16">
+    <div class="w3-third w3-margin-bottom">
+      <img src="SingleBed.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Single Room</h3>
+        <h6 class="w3-opacity">From $100</h6>
+        <p>Single bed</p>
+        <p>38m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" ><a href="SingleRoom.html">Choose Room</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="DoubleBed.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Double Room</h3>
+        <h6 class="w3-opacity">From $150</h6>
+        <p>Queen-size bed</p>
+        <p>45m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" ><a href="DoubleRoom.html">Choose Room</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="Executive Suite.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Executive Suite</h3>
+        <h6 class="w3-opacity">Starting From $200</h6>
+        <p>King-size bed</p>
+        <p>100m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" ><a href="ExecutiveSuite.html">Choose Room</a></button>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-padding-16">
+    <div class="w3-third w3-margin-bottom">
+      <img src="QuarantinePackage.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Quarantine Packages</h3>
+        <h6 class="w3-opacity">$1000</h6>
+        <p>King-size bed</p>
+        <p>80m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" ><a href="QuarantinePackage.html">Choose Room</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="Cabana.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Cabana</h3>
+        <h6 class="w3-opacity">From $150</h6>
+        <p>Queen-size bed</p>
+        <p>35m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" ><a href="Cabana.html">Choose Room</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+        <img src="Villa.jpg" alt="Norway" style="width:100%">
+        <div class="w3-container w3-white">
+          <h3>Villa</h3>
+          <h6 class="w3-opacity">From $200</h6>
+          <p>king-size bed</p>
+          <p>120m<sup>2</sup></p>
+          <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+          <button class="w3-button w3-block w3-black w3-margin-bottom" ><a href="Villa.html">Choose Room</a></button>
+        </div>
+      </div></div>
+  <div class="w3-row-padding" id="about">
+    <div class="w3-col l4 12">
+      <h3>About</h3>
+      <h6>Our hotel is one of a kind. It is truely amazing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
+    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    </div>
+    <div class="w3-col l8 12">
+      <!-- Image of location/map -->
+      <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;">
+    </div>
+  </div>
+  
+  <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+    <div class="w3-third"><i class="fa fa-map-marker " style="color: lightseagreen;"></i> Bali</div>
+    <div class="w3-third"><i class="fa fa-envelope "style="color: lightseagreen;"></i>Email: 91830107@student.liu.edu.lb</div>
+    <div class="w3-third"><i class="fa fa-phone "style="color: lightseagreen;"></i> Phone: +96171990829 or +96170363633</div>
+    <i class="fa fa-envelope " style="color: lightseagreen;"> </i> Email: 91830162@student.liu.edu.lb <br>
+  </div>
+
+  <div class="w3-panel  w3-leftbar w3-padding-32" style="background-color: lightseagreen;">
+    <h6><i class="fa fa-info  w3-padding w3-margin-right" style="background-color: white;"></i> On demand, we can offer playstation, babycall, children care, dog equipment, etc.</h6>
+  </div>
+
+  <div class="w3-container" id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions, do not hesitate to ask them.</p>
+    <i class="fa fa-map-marker " style="width:30px; color: black;"></i> Bali<br>
+    <i class="fa fa-phone " style="width:30px" style="color: black;"></i> Phone: +96171990829 or +96170363633<br>
+    <i class="fa fa-envelope " style="width:30px;color: black;"> </i> Email: 91830107@student.liu.edu.lb <br>
+    <i class="fa fa-envelope " style="width:30px;color: black;"> </i> Email: 91830107@student.liu.edu.lb <br>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap() {
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>

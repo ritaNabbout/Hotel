@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-centre{
+    text-align: center;  
+}
+
+.clearfix{
+    float:none;
+    clear: both;
+}
+h2{
+    color: brown
+
+}
+
+.tbl{
+    width: 100%;
+}
+
+.tbl-30{
+    width: 30%;
+
+}
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: red;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-primary:hover{
+    background-color: black;
+    color: red;
+}
+
+.btn-update{
+    background-color: red;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-update:hover{
+    background-color: black;
+    color: red;
+}
+
+.btn-Delete{
+    background-color: red;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-Delete:hover{
+    background-color: black;
+    color: red;
+}
+
+.success{
+    color:  rgb(108, 255, 127);
+}
+
+.error{
+    color: red;
+}
+
+.menu{
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: crimson;
+}
+.menu ul li a:hover{
+    color: black;
+}
+
+.main-content{
+    background-color: #f1f2f6;
+    padding: 3%;
+}
+
+.col-4{
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    text-align: center;
+    float: left;
+}
+
+.n-h1{
+    color: red;
+}
+
+
+
+.footer{
+    background-color: rgb(255, 0, 140);
+}
+
+.login{
+    width: 20%;
+    border: 1px solid grey;
+    margin: 10% auto;
+    padding: 2%;
+    text-align: center;
+}

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="BalineseFood.html" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="Italian.html" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="Arabic.html" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="Àlafrançaise.html" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="#Asian" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="American.html" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="Desserts.html" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        <label for="myCheck"></label> 
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+        <checkbox aria-checked="myFunction()">Breakfast</checkbox>
+        <label for="myCheck2"></label> 
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+        <checkbox aria-checked="myFunction()">lunch</checkbox>
+        <label for="myCheck3"></label> 
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+        <checkbox aria-checked="myFunction()">Dinner</checkbox>
+        
+        
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script></div>
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Asian Food</div>
+  </div>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div id="myDIV">
+  <!-- First Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Breakfast</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="VietnameseBahnMiOpLa.jpg" alt="VietnameseBahnMiOpLa" style="width:100%"id="Asian">
+      <h3>Vietnamese Bahn Mi Op La</h3>
+      <p>fried egg in a delicious crispy small baguette, with a little chili sauce. Wash it down with some fresh juice and a ca phe sua da (Vietnamese iced coffee).</p>
+      <button>$6.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="JapaneseOmurice.jpg" alt=" JapaneseOmurice" style="width:100%">
+      <h3>Japanese Omurice</h3>
+      <p>Omelette made with fried rice and thin, fried scrambled eggs, usually topped with ketchup.</p>
+      <button>$9.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="FilipinoTamales.jpg" alt="FilipinoTamales" style="width:100%">
+      <h3>Filipino Tamales</h3>
+      <p >Tamales made of rice flour, shredded chicken, and salted duck egg. They're wrapped in banana leaves and steamed. Pair it with a glass of carabao milk and slices of ripe mango.</p>
+      <button>$10.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="ChineseJianbing.jpg" alt="ChineseJianbing" style="width:100%">
+      <h3>Chinese Jianbing</h3>
+      <p>Savory Crepe. It can be topped with different fillings and sauces such as baocui (薄脆, thin and crispy fried cracker), ham, chopped or diced mustard pickles, scallions and coriander, chili sauce or hoisin sauce</p>
+      <button>$6.75</button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="MalaysianRotiCanai.jpg" alt="MalaysianRotiCanai" style="width:100%">
+      <h3>Malaysian Roti Canai</h3>
+      <p>Crispy on the outside yet so fluffy on the inside.erved with variants of curry (such as dhal, chicken, etc) as well as a dollop of sambal.</p>
+      <button>$7.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="MasalaDosa.jpg" alt="MasalaDosa" style="width:100%">
+      <h3>Masala Dosa</h3>
+      <p>made by soaking rice and lentils in water overnight before blending into a batter. It’s then stuffed with cooked potatoes spiced using methi (or fenugreek as it’s also known) and curry leaves and served alongside chutneys and sambar. Sambar is a lentil-based stew or chowder cooked with tamarind.</p>
+      <button>$12.50</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Danbing.png" alt="Danbing" style="width:100%">
+      <h3>Dan bing</h3>
+      <p>Crêpe with a beaten egg or two and your desired toppings, Spring onions, chicken and basil, bacon and cheese, tuna mayonnaise and even fried chicken.  </p>
+      <button>$7.55</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="MisoSoupAndMore.png" alt="MisoSoupAndMore" style="width:100%">
+      <h3>Miso Soup And More</h3>
+      <p>steamed rice, a bowl of miso soup, a selection of pickled vegetables, a Japanese-style omelette and a side of natto. Natto is a strong-smelling, polarising dish made from fermented soybeans.</p>
+      <button>$17.00</button>
+    </div>
+  </div></div>
+
+  
+
+  <div id="myDIV1">
+   <!-- third Photo Grid--><h4 style="font-style: italic; font-weight: bold;">Lunch</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="SpicyBakedTofu.jpg" alt="Spicy Baked Tofu" style="width:100%">
+      <h3>Spicy Baked Tofu</h3>
+      <p>Tofu is a concentrated protein, so you don't need as much tofu as you would meat.Served this with wilted garlic spinach and a fresh salad on the side.</p>
+      <button>$15.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="VietnameseFreshSpringRolls.jpg" alt="Vietnamese Fresh Spring Rolls" style="width:100%">
+      <h3>Vietnamese Fresh Spring Rolls</h3>
+      <p> Vietnamese dish traditionally consisting of pork, prawn, vegetables, bún (rice vermicelli), and other ingredients wrapped in rice paper.</p>
+      <button>$10.75</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="ChineseSpareribs.jpg" alt="Chinese Spareribs" style="width:100%">
+      <h3>Chinese Spareribs</h3>
+      <p>Pork spare ribs may be fried, steamed, or braised.</p>
+      <button>$17.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="ChineseGreenBeanStir-Fry.jpg" alt="Chinese Green Bean Stir-Fry" style="width:100%">
+      <h3>Chinese Green Bean Stir-Fry</h3>
+      <p>Beans stir-fried with garlic and douchi.</p>
+      <button>$7.50</button>
+    </div>
+  </div>
+<!-- fourth Photo Grid--> 
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="KeemaAloo.jpg" alt="Keema Aloo" style="width:100%">
+      <h3>Keema Aloo</h3>
+      <p>Ground Beef & Potato Curry.Served with some crunchy vegetables like red onions or cucumber and bread.</p>
+      <button>$14.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="MachhereJhol.jpg" alt="Machhere Jhol" style="width:100%">
+      <h3>Machhere Jhol</h3>
+      <p>Very spicy stew or gravy that is served with rice seasoned with turmeric, garlic, onions, and grated ginger and Indian spices with potatoes and tomatoes.</p>
+      <button>$16.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Ash-e-jow.jpeg" alt="Ash-e-jow" style="width:100%">
+      <h3>Ash-e-jow</h3>
+      <p>Soup of beans and grains with an abundance of fresh herbs and spinach. The stew is topped with Kashk , tender crispy fried onions, and a garlic mint sauce.</p>
+      <button>$11.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="CoconutSoup.jpg" alt="The Best Thai Coconut Soup" style="width:100%">
+      <h3>The Best Thai Coconut Soup</h3>
+      <p>Coconut soup is sometimes prepared in combinations using other ingredients, such as chicken, potato, or curry.It can be served as a hot or cold soup.</p>
+      <button>$14.75</button>
+    </div>
+  </div>
+  </div>
+  <div id="myDIV2">
+   <!-- fifth  Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Dinner</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="Baozi.png" alt="Baozi" style="width:100%"id="Asian">
+      <h3>Baozi</h3>
+      <p>light and fluffy buns come stuffed with a range of delicious fillings, from barbecue-flavoured char sui pork to sweet egg custard.</p>
+      <button>$5.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Tteokbokki.jpg" alt="Tteokbokki" style="width:100%">
+      <h3>Tteokbokki</h3>
+      <p> Eomuk (fish cakes), boiled eggs, and scallions are some common ingredients paired with tteokbokki in dishes. It can be seasoned with either spicy gochujang (chili paste) or non-spicy ganjang (soy sauce)-based sauce.</p>
+      <button>$11.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="TempuraBatter.jpg" alt="TempuraBatter" style="width:100%">
+      <h3>Tempura Batter</h3>
+      <p>Consisting of seafood, meat, and vegetables that have been battered and deep fried.</p>
+      <button>$13.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Better-Than-Takeout.jpg" alt="Better-Than-Takeout" style="width:100%">
+      <h3>Better-Than-Takeout Beef and Broccoli</h3>
+      <p>This Chinese beef and broccoli is full of umami flavor and pairs nicely with steamed rice or cauliflower rice.</p>
+      <button>$12.00</button>
+    </div>
+  </div>
+  
+  <!-- sixth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Korean-Wings3.jpg" alt="Korean-Wings3" style="width:100%">
+      <h3>Korean Fried Chicken</h3>
+      <p>Basic huraideu-chicken, crunchy exterior and its thick sweet-and-spicy sauce.</p>
+      <button>$10.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="AsianSloppyJoes.jpg" alt="AsianSloppyJoes" style="width:100%">
+      <h3>Asian Sloppy Joes</h3>
+      <p>Full of ground pork, hoisin sauce, ginger, chili garlic sauce, and more! </p>
+      <button>$9.75</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="DumplingStirFry.jpg" alt="DumplingStirFry" style="width:100%">
+      <h3>Dumpling Stir Fry</h3>
+      <p>Sumpling stir-fry recipe was born out of my love and devotion to a certain chili sauce .vegetable dumplings – with a whole lot of veggies and very little time.</p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Rainbow-Stir-fry.jpg" alt="Rainbow-Stir-fry" style="width:100%">
+      <h3>Rainbow Stir-Fry</h3>
+      <p>Noodles with onions, carrots, broccoli, peppers, and green beans</p>
+      <button>$20.00</button>
+    </div>
+  </div></div>
+   <!-- seventh Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Sushi </h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="Temaki.jpg" alt="Sushi" style="width:100%"id="Asian">
+      <h3>Temaki</h3>
+      <p>rolling nori sheets into cone shapes, and then filling them with fish, veggies, and rice.</p>
+      <button>$25.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Maki.jpg" alt="Sushi" style="width:100%">
+      <h3> Maki</h3>
+      <p>cut-rolled sushi , made using seaweed thats wrapped with a layer of veggies, rice and fish.</p>
+      <button>$23.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="sashimi.jpg" alt="sushi" style="width:100%">
+      <h3>Sashimi</h3>
+      <p>The fish is sliced in long and rectangular slices. it’s served alongside soy sauce and ginger.</p>
+      <button>$20.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="nigiri.jpg" alt="sushi" style="width:100%">
+      <h3>Nigiri</h3>
+      <p>Sushi rice balls seasoned with rice vinegar , and then topped with a slice of raw fish. </p>
+      <button>$23.75</button>
+    </div>
+  </div>
+  <p>You can pick sushi types that you like</p>
+  <!-- 8 Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="smallSushiBoat.jpg" alt="sushi" style="width:100%">
+      <h3>Small Sushi Boat</h3>
+      <button>$17.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="MediumSushiBoat.jpg" alt="sushi" style="width:100%">
+      <h3>The Medium Sushi Boat</h3>
+      <button>$50.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="largeSushiBoat.jpg" alt="sushi" style="width:100%">
+      <h3>Large Sushi Boat</h3>
+      <button>$75.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="HugeSushiBoat.jpg" alt="sushi" style="width:100%">
+      <h3>The Huge Sushi Boat</h3>
+      <button>$100.00</button>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-black w3-button">5</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About The Asian Food</h3><br>
+    <img src="Asian1.jpg" alt="Me" class="w3-image" style="display:block;margin:auto; width: 1000px; height: 500px;">
+    <div class="w3-padding-32">
+      <h4><b>This is how we roll!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Asian cuisine includes several major regional cuisines: Central Asian, East Asian, North Asian, South Asian, Southeast Asian, and West Asian.Ingredients common to many cultures in the East and Southeast regions of the continent include rice, ginger, garlic, sesame seeds, chilies, dried onions, soy, and tofu. Stir frying, steaming, and deep frying are common cooking methods.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="VietnameseFreshSpringRolls.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="nigiri.jpg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

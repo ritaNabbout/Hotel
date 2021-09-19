@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 200px;
+}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="BalineseFood.html" onclick="w3_close()" class="w3-bar-item w3-button">Balinese</a>
+  <a href="Italian.html" onclick="w3_close()" class="w3-bar-item w3-button">Italian</a>
+  <a href="Arabic.html" onclick="w3_close()" class="w3-bar-item w3-button">Arabic</a>
+  <a href="#Àlafrançaise" onclick="w3_close()" class="w3-bar-item w3-button">À la française</a>
+  <a href="Asian.html" onclick="w3_close()" class="w3-bar-item w3-button">Asian</a>
+  <a href="American.html" onclick="w3_close()" class="w3-bar-item w3-button">American</a>
+  <a href="Desserts.html" onclick="w3_close()" class="w3-bar-item w3-button">Desserts</a>
+  <a href="homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Go Back Home!</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+        <label for="myCheck"></label> 
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+        <checkbox aria-checked="myFunction()">Breakfast</checkbox>
+        <label for="myCheck2"></label> 
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()">
+        <checkbox aria-checked="myFunction()">lunch</checkbox>
+        <label for="myCheck3"></label> 
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()">
+        <checkbox aria-checked="myFunction()">Dinner</checkbox>
+        
+        
+        <script>
+          function myFunction() {
+            var checkBox = document.getElementById("myCheck");
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var x = document.getElementById("myDIV2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+          </script></div>
+    <div class="w3-center w3-padding-16" style="font-style: italic; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 35px;">À la française Food</div>
+  </div>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div id="myDIV">
+  <!-- First Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Breakfast</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="WAKEUP-STUFFED-FRENCH-TOAST-PANINI.jpg" alt="Toast" style="width:100%"id="Àlafrançaise">
+      <h3>Wake-Up Stuffed French Breakfast Panini</h3>
+      <p>1 loaf French bread, cream cheese, choice jelly or jam,butter, melted and powdered sugar</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Brioche-French-Toast.jpg" alt=" Brioche-French-Toast" style="width:100%">
+      <h3>Brioche French Toast</h3>
+      <p>It contains Brioche bread, eggs, whole milk, sugar, pure vanilla extract and butter</p>
+      <button>$9.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Breakfast-Crepes-Square.jpg" alt="Breakfast-Crepes-Square" style="width:100%">
+      <h3>French Breakfast Crepes</h3>
+      <p >These savory herbed breakfast crepes are perfect for a crowd – with baked runny egg, melted cheese, and lots of fresh herbs!</p>
+      <button>$5.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="croqueMadame.jpeg" alt="croqueMadame" style="width:100%">
+      <h3>Croque Madame</h3>
+      <p>Lodge Bread, this one incorporates mornay sauce made with béchamel, gruyere and egg yolk for the ultimate breakfast.</p>
+      <button>$10.75</button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Buvette.jpg" alt="Buvette" style="width:100%">
+      <h3>Buvette</h3>
+      <p>Bacon and egg waffle sandwich, creamy scrambled eggs with prosciutto and parmesan.</p>
+      <button>$13.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="strata-casserole.jpg" alt="strata-casserole" style="width:100%">
+      <h3>Strata Casserole</h3>
+      <p>Baked eggs casserole, gluten free French bread, ham, veggies, and more.</p>
+      <button>$14.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="frenchCroissant.jpg" alt="Croissant" style="width:100%">
+      <h3>Croissant</h3>
+      <p>These Croissant are served with jam and fruits.</p>
+      <button>$7.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="frenchPalette.jpg" alt="frenchbreakfast" style="width:100%">
+      <h3>Breakfast palette</h3>
+      <p>cup of milk, croissant,3 types of jam, honey, oatmeal and fruits.</p>
+      <button>$18.75</button>
+    </div>
+  </div>
+</div>
+  
+<div id="myDIV1">
+  <!-- third Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Lunch</h4>
+  <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="Coq-au-vin.jpg" alt="Coq-au-vin" style="width:100%"id="Àlafrançaise">
+      <h3>Coq au vin</h3>
+      <p>chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic and sometimes even a drop of brandy.</p>
+      <button>$27.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Boeuf-bourguignon.jpg" alt="Boeuf-bourguignon" style="width:100%">
+      <h3>Boeuf bourguignon</h3>
+      <p>is essentially a stew made from beef braised in red wine, beef broth, and seasoned vegetables including pearl onions and mushrooms.</p>
+      <button>$25.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Confit-de-canard.jpg" alt="Confit-de-canard" style="width:100%">
+      <h3>Confit de canard</h3>
+      <p>duck meat marinated in salt, garlic, and thyme for around 36 hours and then slow-cooked in its own fat at low temperatures.It is typically served with confit roasted potatoes and garlic on the side.</p>
+      <button>$34.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Ratatouille.jpg" alt="Ratatouille" style="width:100%">
+      <h3>Ratatouille</h3>
+      <p>Vegetables shallow-fried and then layered in a casserole dish before being baked in an oven.</p>
+      <button>$16.75</button>
+    </div>
+  </div>
+  
+  <!-- fourth Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="EscargotsDeBourgogne.jpg" alt="EscargotsDeBourgogne" style="width:100%">
+      <h3>Escargots de Bourgogne</h3>
+      <p>This recipe is cooked with a whole lot of butter, garlic, and parsley.</p>
+      <button>$30.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="FoieGras.jpg" alt="FoieGras" style="width:100%">
+      <h3>Foie gras</h3>
+      <p>French foie gras with apple and pear chutney on the toast.</p>
+      <button>$28.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="TheSaladJaco.jpg" alt="TheSaladJaco" style="width:100%">
+      <h3>The salad Jaco</h3>
+      <p>pan-fried scallops in olive oil with a green salad. The addition of caramelized onions brought a little sweetness to the vinaigrette-tossed greens.</p>
+      <button>$14.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Spinach&MushroomsQuiche.jpg" alt="Spinach" style="width:100%">
+      <h3>Spinach & Mushrooms Quiche</h3>
+      <p>Homestyle pastry crust filled with egg, cream, spinach and mushrooms. Served with baby greens with french vinaigrette.</p>
+      <button>$17.00</button>
+    </div>
+  </div>
+   <!-- fifth Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="Le-French-Moules.jpg" alt="mussels" style="width:100%">
+      <h3>Mussels</h3>
+      <p>East-coast blue mussels cooked in a shallot and white wine garlic broth. Served with a house paprika-lemon aioli on a French baguette.</p>
+      <button>$29.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Jacques_Lameloise,_escabèche_d'écrevisses_sur_gaspacho_d'asperge_et_cresson.jpg" alt="escabèche d'écrevisses sur gaspacho d'asperge et cresson" style="width:100%">
+      <h3>Escabèche d'écrevisses sur gaspacho d'asperge et cresson</h3>
+      <p>This dish consists of marinated crayfish on gazpacho asparagus and watercress.</p>
+      <button>$15.75</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="Blanquette-de-Veau.jpg" alt="Blanquette-de-Veau" style="width:100%">
+      <h3>Blanquette de Veau</h3>
+      <p>Blanquette is usually served with rice à la créole but may also be served with celeriac (celery root), halved celery hearts, carrots, braised parsnips or leeks, cucumber (cut into chunks and braised three minutes in boiling salted water, braised lettuce or lettuce hearts.</p>
+      <button>$23.50</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Sous-vide-fillet-of-beef.jpg" alt="Sous-vide-fillet-of-beef" style="width:100%">
+      <h3>Sous vide fillet of beef, pomme anna and mushroom purée</h3>
+      <p>prime cut of beef with a mushroom purée, pomme Anna potatoes and celeriac.</p>
+      <button>$26.00</button>
+    </div>
+  </div>
+</div>
+<div id="myDIV2">
+   <!-- sixth Photo Grid--> <h4 style="font-style: italic; font-weight: bold;">Dinner</h4>
+   <div class="w3-row-padding w3-padding-16 w3-center" >
+    <div class="w3-quarter" >
+     
+      <img src="frenchOnionSoup.jpg" alt="OnionSoup" style="width:100%"id="Àlafrançaise">
+      <h3>French Onion Soup</h3>
+      <p>based on meat stock and onions, and often served gratinéed with croutons or a larger piece of bread covered with cheese floating on top. Served with fresh toast. </p>
+      <button>$12.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="SalmonEnPapillote.jpg" alt="fish" style="width:100%">
+      <h3>Salmon En Papillote</h3>
+      <p>Salmon fillets placed on a bed of vegetables, wrapped in a parchment paper pouch (en papillote) and baked in the oven. The fish is also topped with basil compound butter for extra flavor!</p>
+      <button>$14.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="CroqueMonsieur.jpeg" alt="CroqueMonsieur" style="width:100%">
+      <h3>Croque Monsieur </h3>
+      <p>French ham and cheese sandwich made with gruyere, parmesan, ham and a simple béchamel sauce, toasted in the oven.Serve with a green salad and a small cup of French Onion Soup and you have the perfect Parisian meal!</p>
+      <button>$13.25</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="Lamb-ShankNavarin.jpg" alt="Lamb-ShankNavarin" style="width:100%">
+      <h3>Lamb Shank Navarin</h3>
+      <p>Lamb in the sauce with potato, turnip, parsley,seasoned with salt and pepper</p>
+      <button>$18.00</button>
+    </div>
+  </div>
+  
+  <!-- seventh Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="LyonnaisePotatoes.jpg" alt="LyonnaisePotatoes" style="width:100%">
+      <h3>Lyonnaise Potatoes</h3>
+      <p>Pan-fried potato with the addition of caramelized onions and lots of butter.</p>
+      <button>$10.00</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="SaladeAveyronnaise.jpg" alt="SaladeAveyronnaise" style="width:100%">
+      <h3>Salade Aveyronnaise</h3>
+      <p>Bacon and Roquefort cheese as its main ingredients, including garlic, basil, and baby spinach dressed with a vinaigrette based on sherry vinegar and mild-tasting olive oil,topped with even more cheese and nuts</p>
+      <button>$9.00</button>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="ChickenCordonBleuQuesadillas.jpg" alt="Chicken" style="width:100%">
+      <h3>Chicken Cordon Bleu Quesadillas</h3>
+      <p>Cheesy, savory goodness in every crispy bite!Swiss cheese, skinless chicken breasts, dijon mustard, flour tortillas, olive oil.</p>
+      <button>$9.75</button>
+    </div>
+    <div class="w3-quarter">
+      <img src="chickenRoulade.jpg" alt="chickenRoulade" style="width:100%">
+      <h3>Chicken Roulade</h3>
+      <p>Chicken Roulade Stuffed with Brussels Sprouts, Walnuts, and Pecorino.Warm up with this nutty, cheesy, earthy take on stuffed chicken.</p>
+      <button>$13.00</button>
+    </div>
+  </div></div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="BalineseFood.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="Italian.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="Arabic.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="Àlafrançaise.html" class="w3-bar-item w3-black w3-button">4</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">5</a>
+      <a href="American.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="Desserts.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      <a href="Asian.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About The French Food</h3><br>
+    <img src="FrenchFood.jpg" alt="Me" class="w3-image" style="display:block;margin:auto; width: 1000px; height: 500px;">
+    <div class="w3-padding-32">
+      <h4><b>Pour bien cuisiner il faut de bons ingrédients, un palais, du coeur et des amis.!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>A meal often consists of three courses, hors d'œuvre or entrée (introductory course, sometimes soup), plat principal (main course), fromage (cheese course) or dessert, sometimes with a salad offered before the cheese or dessert.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h2>Menu</h2>
+     <a href="AboutUs.html" style="font-size: 20px;">About US</a><br>
+     <a href="rooms.html" style="font-size: 20px;">Room Booking </a><br>
+     <a href="profile.html" style="font-size: 20px;">Show Profile</a><br>
+     <a href="Cinema.html" style="font-size: 20px;">Cinema </a>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+
+          <img src="frenchCroissant.jpg" class="w3-left w3-margin-right" style="width:250px; height: 100px;">
+  
+       
+          <img src="CroqueMonsieur.jpeg" class="w3-left w3-margin-right" style="width: 250px;height: 100px;">
+        
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bali</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Hotel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Desserts</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

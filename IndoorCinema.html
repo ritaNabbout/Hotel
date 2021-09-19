@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    html{
+      scroll-behavior: smooth;
+    }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url("FoodMenu.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  }
+  
+  .login{
+  background-color: lightseagreen;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Column container */
+  .row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  .btn {
+    background-color: lightseagreen;
+    color: white;
+    padding: 13px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+      <a href="login.php"  class="login">Login</a>
+      <a href="Cinema.html">Back<<</a>
+      </div>
+      <div class="w3-row-padding">
+
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Full Rocker</li>
+            <li class="w3-padding-16"><img src="full rocker.jpg" alt="Full Rocker" style="height: 200px; width: 350px;"></li>
+            <li class="w3-padding-16">
+              <h2 class="w3-wide">$ 10</h2>
+              <span class="w3-opacity">per Seat</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button  w3-padding-large" style="background-color: lightseagreen;">Register</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+          
+          <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <li class=" w3-xlarge w3-padding-32" style="background-color: lightseagreen;">VIP seats</li>
+            <li class="w3-padding-16"><img src="vip seat.jpg" alt="VIP" style="height: 200px; width: 350px;"></li>
+            <li class="w3-padding-16">
+              <h2 class="w3-wide">$ 25</h2>
+              <span class="w3-opacity">per Seat</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button  w3-padding-large" style="background-color: lightseagreen;">Reserve</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+          <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <li class="w3-black w3-xlarge w3-padding-32">Huge Seats</li>
+            <li class="w3-padding-16"><img src="HugeBed.jpg" alt="Huge seat" style="height: 200px; width: 350px;"></li>
+            <li class="w3-padding-16">
+              <h2 class="w3-wide">$ 50</h2>
+              <span class="w3-opacity">per Seat</span>
+            </li>
+            <li class="w3-light-grey w3-padding-24">
+              <button class="w3-button  w3-padding-large " style="background-color: lightseagreen;" >Reserve</button>
+            </li>
+          </ul>
+        </div>
+        
+        </div>
+        
+        </body>
+        </html>
